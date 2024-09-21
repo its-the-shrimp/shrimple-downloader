@@ -1,0 +1,64 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: $BG;
+    color: $FG;
+    font-family: consolas;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.interactive {
+    display: block;
+    font-family: consolas;   
+    border-style: solid;
+    outline: none;
+    background-color: $FG;
+    height: 1.5em;
+}
+
+.interactive:hover {
+    border-color: $ACTIVE;
+}
+
+.interactive:active {
+    background-color: $ACTIVE;
+}
+
+.controls {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 15em;
+    height: 5em;
+}
+
+#msg {
+    padding: 1em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.error {
+    color: red;
+}
+
+.main-content {
+    display: flex;
+    padding-left: 25%;
+    padding-right: 25%;
+    align-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-content-inner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+}

@@ -1,0 +1,61 @@
+<$ref $ERR=404.html />
+<$ref $ICO=favicon.ico />
+
+<$lua>
+    BG = "#112244"
+    MG = "#334455"
+    FG = "#CCDDDD"
+    ACTIVE = "#1199DD"
+</$lua>
+
+<$template name=main acceptsChildren>
+    <head>
+        <title>Download video/audio from X, Instagram, Tiktok, VK</title>
+        <link href=index.css rel=stylesheet />
+    </head>
+    <body>
+        <a href="https://t.me/shrimple_download_bot" target=_blank>
+            <img style="position: fixed; left: 0; top: 0" src=telegram.svg width=10% alt="Telegram logo" />
+        </a>
+        <div class=main-content>
+            <$children />
+        </div>
+    </body>
+</$template>
+
+<$main>
+    <div style="display: flex; justify-content: center; padding-top: 5em"> 
+        <div>
+            <h1>
+                Download anything ✨ 🦐
+            </h1>
+            <br />
+            <p>
+                Use this simple website to download any video from various websites, including:
+                <br/>
+                X (Twitter), Instagram, Tiktok, VK
+            </p>
+            <div style="display: flex; justify-content: space-between">
+                <!-- <img src=yt.svg alt="Youtube logo" height=50 /> -->
+                <img src=x.svg alt="X (formerly Twitter) logo" height=50 />
+                <img src=instagram.svg alt="Instagram logo" height=50 />
+                <img src=tiktok.svg alt="Tiktok logo" height=50 />
+                <img src=vk.svg alt="VK logo" height=50 />
+            </div>
+            <p>
+                Also check out our Telegram bot, the link to it is in the top left corner
+            </p>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; flex: 1">
+        <form style="align-self: center" class=controls method=get action=download>
+            <input name=link class=interactive placeholder="Enter a link..." />
+            <button class=interactive name=kind value=video>
+                Download as video (MP4)
+            </button>
+            <button class=interactive name=kind value=audio>
+                Download as audio (MP3)
+            </button>
+        </form>
+    </div>
+</$main>

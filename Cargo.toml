@@ -1,0 +1,46 @@
+[package]
+name = "shrimple-downloader"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["process", "macros", "rt-multi-thread", "net", "signal"] }
+axum = { version = "0.7", default-features = false, features = ["http1", "json", "tokio", "macros"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json", "multipart", "stream"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+log = { version = "0.4", features = ["std"] }
+percent-encoding = "2.3"
+futures = "0.3"
+tower = "0.5"
+tower-http = { git = "https://github.com/its-the-shrimp/tower-http.git", features = ["fs"] }
+http = "1"
+tokio-util = "0.7.11"
+heapless = "0.8.0"
+http-body = "1"
+http-body-util = "0.1.2"
+
+[lints.clippy]
+# complexity = { level = "warn", priority = -1 }
+unit_arg = "allow"
+redundant_closure_call = "allow"
+
+# restriction = { level = "allow", priority = -1 }
+unwrap_used = "warn"
+expect_used = "warn"
+deref_by_slicing = "warn"
+infinite_loop = "warn"
+mixed_read_write_in_expression = "warn"
+exit = "warn"
+print_stdout = "warn"
+print_stderr = "warn"
+
+pedantic = { level = "warn", priority = -1 }
+must_use_candidate = "allow"
+module_name_repetitions = "allow"
+ignored_unit_patterns = "allow"
+unsafe_derive_deserialize = "allow"
+
+nursery = { level = "warn", priority = -1 }
+option_if_let_else = "allow"
+or_fun_call = "allow"
